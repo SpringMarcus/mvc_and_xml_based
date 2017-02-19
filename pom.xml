@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- pom - project object model -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- POM model version (always 4.0.0) -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- group or organization that this project belongs to
+    often inverted domain name -->
+    <groupId>com.marcus.chiu</groupId>
+
+    <!-- name given to this project library -->
+    <artifactId>SpringMVC</artifactId>
+
+    <!-- version of this project -->
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- how this project should be packaged jar(default) or war -->
+    <!-- name of jar or war file will be artifact id + version -->
+    <packaging>war</packaging>
+
+    <name>TheRealSpring</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <org.springframework-version>4.2.4.RELEASE</org.springframework-version>
+        <kotlin.version>1.0.4</kotlin.version>
+    </properties>
+
+    <dependencies>
+
+         <!-- Example Dependency
+         <dependency>
+
+            //The group/organization this belongs to
+            <groupId>mysql</groupId>
+
+            //The library that's required
+            <artifactId>mysql-connector-java</artifactId>
+
+            //The version of the requested library
+            <version>5.1.34</version>
+
+            // scoped 'compile' by default - which is ready at compile time
+            // 'provided' - will be provided at runtime by a container running the code
+            // 'test' - used for compiling tests, but not required for building/running code
+            <scope>runtime</scope>
+
+        </dependency>
+        -->
+
+        <!-- Spring Stuff -->
+        <dependency> <!-- used for model view controller -->
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency> <!-- used for database stuff -->
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <!-- MySQL -->
+        <!-- MySQL database driver -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.34</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+        <!-- <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.3.3.RELEASE</version>
+        </dependency> -->
+
+        <!-- JPA -->
+        <!-- <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>4.3.7.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.0.Final</version>
+        </dependency> -->
+
+        <!-- annotation library for accessors and mutators/setters -->
+        <!-- <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.14.8</version>
+            <scope>compile</scope>
+        </dependency> -->
+
+        <!--<dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test</artifactId>
+            <version>${kotlin.version}</version>
+            <scope>test</scope>
+        </dependency>-->
+
+    </dependencies>
+
+    <!--<build>
+        <plugins>
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>test-compile</id>
+                        <phase>process-test-sources</phase>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>-->
+
+</project>
